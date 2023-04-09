@@ -2,11 +2,6 @@ version: '3.9'
 services:
  app:
   build: .
-  volumes:
-   - .:/backendm8
+  command: python manage.py runserver 0.0.0.0:8000
   ports:
-   - 8090:8090
-  #image: app:django
-  #container_name: django_container
-  #importante configurar en sttings.py ALLOWED_HOSTS = ['*']
-  command: python manage.py runserver 0.0.0.0:8090
+   - 8000:8000
